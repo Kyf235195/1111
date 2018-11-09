@@ -43,11 +43,11 @@ body {
 
 #allcontent {
         width:            800px;
-        padding-top       5px;
-        padding-bottom    5px;
+        padding-top:      5px;
+        padding-bottom:   5px;
         background-color: #675c47;
-        margin-left       auto;
-        margin-right      auto;
+        margin-left:      auto;
+        margin-right:     auto;
 }
 
 h1 {
