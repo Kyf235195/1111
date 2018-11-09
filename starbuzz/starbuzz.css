@@ -15,14 +15,20 @@ body {
   background:       #efe5d0 url(images/background.gif) top left;
   font-size:        105%;
   padding:          15px;
-  margin:           0px 10px 10px 10px;
+  margin:           0px 330px 10px 10px;
+  width:            420px;
+  float:            left;
 }
 
 #sidebar {
   background:       #efe5d0 url(images/background.gif) bottom right;
   font-size:        105%;
   padding:          15px;
-  margin:           0px 10px 10px 10px;
+  margin:           0px 10px 10px 470px;
+  position:         absolute;
+  top:              128px;
+  right:            0px;
+  width:            280px;
 }
 
 #footer {
@@ -32,6 +38,16 @@ body {
   padding:          15px;
   margin:           10px;
   font-size:        90%;
+  clear:            right;
+}
+
+#allcontent {
+        width:            800px;
+        padding-top       5px;
+        padding-bottom    5px;
+        background-color: #675c47;
+        margin-left       auto;
+        margin-right      auto;
 }
 
 h1 {
