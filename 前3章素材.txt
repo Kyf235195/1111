@@ -1,0 +1,83 @@
+create  database stu1
+go
+use stu1
+go
+create table  student
+(
+Sno char(10)  primary key,
+Sname char(8) unique,
+Ssex char(2) check(Ssex='男' or Ssex='女'),
+Sage smallint,
+Sdept char(20)
+
+
+
+
+)
+
+create table Course
+(
+
+Cno char(4)  primary key,
+Cname  char(20),
+Cpno char(4),
+Ccredit  smallint
+
+foreign key(cpno)  references Course(cno)
+
+
+
+)
+
+create  table  SC
+(
+Sno char(10),
+Cno char(4),
+Grade  smallint,
+primary key(Sno,Cno),
+foreign key(Sno) references student(Sno),
+foreign key(Cno)  references Course(Cno)
+
+
+
+)
+
+insert  into student(Sno,Sname,Ssex,Sage,Sdept)
+  values('001','潘婷','女',21,'计算机')
+insert  into student(Sno,Sname,Ssex,Sage,Sdept)
+  values('002','孙林','男',21,'计算机')
+insert  into student(Sno,Sname,Ssex,Sage,Sdept)
+  values('003','李宏伟','男',20,'新闻')
+insert  into student(Sno,Sname,Ssex,Sage,Sdept)
+  values('004','吴静芳','女',20,'软件工程')
+insert  into student(Sno,Sname,Ssex,Sage,Sdept)
+  values('005','林妙可','女',19,'软件工程')
+insert  into student(Sno,Sname,Ssex,Sage,Sdept)
+  values('006','宣慧','女',22,'新闻')
+
+
+insert into Course(Cno,Cname,Cpno,Ccredit)
+values('1','数据库','5',4);
+insert into Course(Cno,Cname,Cpno,Ccredit)
+values('2','数学',null,2);
+insert into Course(Cno,Cname,Cpno,Ccredit)
+values('3','网站数据库应用实例','1',4);
+insert into Course(Cno,Cname,Cpno,Ccredit)
+values('4','数据处理',null,3);
+insert into Course(Cno,Cname,Cpno,Ccredit)
+values('5','数据结构','4',3);
+insert into Course(Cno,Cname,Cpno,Ccredit)
+values('6','操作系统','5',4);
+insert into Course(Cno,Cname,Cpno,Ccredit)
+values('7','计算机基础',null,4);
+
+
+
+
+insert into SC(Sno,Cno,Grade) values('001','1',92);
+
+insert into SC(Sno,Cno,Grade) values('001','2',86);
+insert into SC(Sno,Cno,Grade) values('001','3',88);
+insert into SC(Sno,Cno,Grade) values('002','3',89);
+insert into SC(Sno,Cno,Grade) values('002','2',90);
+insert into SC(Sno,Cno,Grade) values('003','7',89);
