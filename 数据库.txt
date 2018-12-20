@@ -1,0 +1,68 @@
+
+1.下列四项中，不数据数据库特点的是（）。
+A.数据共享 B.数据完整性 C.数据冗余较小 D.数据独立性低
+2.数据库中储存的是（）。
+A.数据 B.数据模型 C.数据之间的联系 D.数据以及数据之间的联系
+3.数据库类型是按照（）来划分的。
+A.文件形式 B.数据模型 C.记录形式 D.数据存取方法
+4.FOREIGN KEY约束是（）约束。
+A.实体完整性 B.参照完整性 C.用户自定义完整性 D.域完整性
+5.在创建数据表时可以给字段规定NULL或NOT NULL值，NULL值得含义是（）。
+A.0  B.空格 C.=’’ D.不确定
+6.下列的完整性约束（）是唯一性约束。
+A.CHECK   B.PRIMARY KEY  C.NULL/NOT NULL  D.UNIQUE
+7.使用系列（）约束可以确保输入的值在指定的范围内。
+A.CHECK  B.PRIMARY KEY  C.NULL/NOT NULL  D.FOREIGN KEY
+8.在SQL的语句中，ALTER的作用是（）。
+A.修改基本表 B.修改基本表中的数据 C.修改基本表的结构 D.修改视图
+9.在SQL Server2012版本中创建用于数据库时，一个SQL Server的实例中最多可以创建不超过（）个。
+A.100  B.40000  C.20  D.32767
+10.在SQL Server2005中，数据库文件的后缀名为（）。
+A.mdb  B.mdf  C.ldf  D.ndf
+11.下面（）选项表示要执行差异备份。
+A.Recovery  B.Norecoery   C.Differential  D.Noint
+12.下列数据库中，（）数据库不允许进行备份操作。
+A.teaching  B.model  C.msdb  D.tempdb
+13.对一个重要的只读数据库，我们经常采用（）方法备份数据库。
+A.完全数据库备份 B.差异备份 C.数据库文件和文件组备份 D.事务日志备份
+14.在SQL中，与关系代数中的投影运算对应的子句是（）。
+A.select  B.from  C.where  D.order by
+15.用SQL语言描述“在教室表中查找女教师的全部信息”，以下描述中正确的是（）。
+A.SELECT FROM教师表IF性别=’女’
+B. SELECT性别FROM教师表IF性别=’女’
+C. SELECT * FROM教室表WHERE性别=’女’
+D. SELECT * FROM性别WHERE性别=’女’
+16.与having子句一起使用的子句是（）。
+A.group by  B.order by  C.where  D.join
+17.查询中需要统计元组队个数时，应使用（）函数。
+A.SUM(列名)  B.COUNT(列名)  C.COUNT(*)  D.AVG(列名)
+18.查询中需要统计某列中值得个数应使用（）函数。
+A.SUM(列名)  B.COUNT(列名)  C.COUNT(*)  D.AVG(列名)
+19.聚合函数的返回值是（）。
+A.一个标量值 B.一组值  C.表达式  D.表
+20．在学生表（学号，姓名，性别）和课选表（学号，课程号，成绩）中，查询选修课成绩在80分以上的女生姓名，则用（）语句。
+A.select姓名from学生表，选课表where学生表.学号or性别=’女’and成绩>=80
+B.select姓名from学生表，选课表where学生表.学号and性别=’女’or成绩>=80
+C.select姓名from学生表，选课表where学生表.学号or性别=’女’or成绩>=80
+D.select姓名from学生表，选课表where学生表.学号and性别=’女’and成绩>=80
+21.在教师表（教师号，姓名），授课表（课程号，教师号，学分）和课程表（课程号，课程名）中，查询“陈静”教师所讲授的课程，列出姓名和课程名，则用（）语句。
+A.select姓名，课程名from教师表，授课表，课程表where教师表.教师号=授课表.教师号and姓名=’陈静’
+B.select姓名，课程名from教师表，授课表，课程表where教师表.教师号=授课表.教师号and授课表.课程号=课程表.课程号and姓名=’陈静’
+C.select姓名，课程名from教师表，授课表，课程表where教师表.教师号=授课表.教师号and授课表.教师号=课程表.课程号and姓名=’陈静’
+D.select姓名，课程名from教师表，授课表，课程表where授课表.课程号=课程表.课程号and姓名=’陈静’
+22.查询所有比“陈静”教师工资高的教师姓名及工资，使用下列语句select x.姓名x.工资from教师表as x教师表as y where x.工资>y.工资and y.姓名=“陈静”。该语句使用的查询是（）。
+A.内连接查询  B.外连接查询  C.自身连接查询  D.子查询
+23.查询与“陈静”教师职称相同的教师名，用（）语句。
+A.select姓名from教师表where职称=’陈静’职称
+B.select x.姓名from教师表as x教师表as y where x.职称=y.职称where y.姓名=’陈静’
+C.select姓名from教师表where职称=（select职称from教师表and姓名=’陈静’）
+D.select姓名from教师表where职称=（select职称from教师表where姓名=’陈静’）
+24.当子查询返回的值是一个集合时，（）不是在比较运算符和子查询中使用的量词。
+A.REST  B.IN  C.ALL  D.ANY
+25.查询讲授课程号为c140的教师姓名，错误的语句是（）。
+A.select姓名from教师表where(教师号=any（select教师号from授课表where课程号=’c140’）)
+B.select姓名from教师表where exists(select * from授课表where授课表.教师号=教师表.教师号and课程号=’c140’)
+C.select姓名from教师表，授课表where教师表.教师号=授课表.教师号and授课表.课程号=’c140’
+D.select姓名from教师表where(教师号=all（select教师号from授课表where课程号=’c140’）)
+26.在SQL中使用UPDATE对表中数据进行修改时，应用的子句是（）。
+A.WHERE  B.FROM  C.VALUES  D.SET
