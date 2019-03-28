@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <title>数组造句</title>
+</head>
+<body>
+    <script>
+    function arraymakesentence() {
+      var person = ['杨吉','孙权','濮徐杰','王达','沈宇峰','徐杨','孔易飞','顾强','顾伟豪']
+      var time = ['早上','中午','下午','晚上']
+      var location = ['在教室','在操场','在食堂','在家']
+      var activity = ['吃饭','打球','打游戏','看电影']
+    function chooseRandStrInArray(array) {
+      return array[Math.floor(Math.random() * array.length)]
+    }
+    document.write(chooseRandStrInArray(person) + chooseRandStrInArray(time) + chooseRandStrInArray(location) + chooseRandStrInArray(activity))
+    }
+    arraymakesentence();
+    </script>
+</body>
+</html>
