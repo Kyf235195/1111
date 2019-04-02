@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var scores = [23,34,42,56,78,12,64,37,97,40,20,55,72,39]
+    var hightest = 0
+    var xiang = i
+    for (var i = 0; i<scores.length; i++){
+      if(scores[i] > hightest){
+        hightest = scores[i]
+      }
+    }
+    document.write("最大值是" + hightest + "最大值的下标是" + xiang + "。")
+  </script>
+</body>
+</html>
