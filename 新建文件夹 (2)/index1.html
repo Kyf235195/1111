@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function makePhrases() {
+
+  var person=['顾伟豪','王城礼','孔易飞','杨吉','孙权']
+  var time=['早上','中午','晚上']
+  var location=['在学校','在家','在操场','在教室']
+  var activity=['吃饭','打游戏','睡觉']
+
+  //var p= Math.floor(Math.random()* name.length)
+  //var t= Math.floor(Math.random()* time.length)
+  //var l= Math.floor(Math.random()* location.length)
+  //var a= Math.floor(Math.random()* activity.length)
+
+    var a=chooseRand(person)+""+chooseRand(time)+""+chooseRand(location) +""+chooseRand(activity)
+  documnet.write(a)
+
+  function chooseRand(array){
+    return array [Math.floor(Math.random() * array.length)]
+  
+    }
+  }
+
+  makePhrases();
+  </script>
+</body>
+</html>
