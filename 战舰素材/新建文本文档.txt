@@ -1,0 +1,6 @@
+  var fireButton = document.getElementById("fireButton");
+  console.log (model.ships);
+  fireButton.onclick = handleFireButton;
+  var guessInput = document.getElementById("guessInput");
+  guessInput.onkeypress = handleKeyPress;
+  model.generateShipLocations();
